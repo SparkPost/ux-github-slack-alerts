@@ -10,6 +10,7 @@ jobs:
   dispatch-slack-alerts:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Install Dependencies
         run: npm ci
       - name: Dispatch Alerts
