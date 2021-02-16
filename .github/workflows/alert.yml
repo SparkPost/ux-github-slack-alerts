@@ -10,6 +10,8 @@ jobs:
   dispatch-slack-alerts:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Dependencies
+        run: npm ci
       - name: Dispatch Alerts
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
