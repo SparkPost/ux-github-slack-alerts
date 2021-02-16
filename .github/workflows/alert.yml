@@ -15,6 +15,6 @@ jobs:
         run: npm ci
       - name: Dispatch Alerts
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           GITHUB_TOKEN: ${{ secrets.GRAPHQL_GITHUB_TOKEN }}
         run: npm run slack
