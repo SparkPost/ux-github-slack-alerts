@@ -1,0 +1,16 @@
+name: Slack Alerts
+
+on:
+  workflow_dispatch: # Allows manual triggering - this can be removed after stabilization
+  schedule:
+    # Run every Monday at 2 PM EST (6:00 PM UTC)
+    - cron: "0 18 * * 1"
+
+jobs:
+  dispatch-slack-alerts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch Alerts
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+        run: npm run slack
