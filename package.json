@@ -6,8 +6,9 @@
   "dependencies": {
     "bluebird": "^3.7.2",
     "got": "^11.3.0",
-    "graphql-request": "^1.8.2",
-    "lodash": "^4.17.19"
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "husky": "^4.2.5",
